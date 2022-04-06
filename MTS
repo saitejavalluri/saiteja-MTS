@@ -1,0 +1,31 @@
+qestion-1
+app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  
+ title='MOBILE SHOPPING';
+ productTitle:string="SAMSUNG";
+ productPrice:number=40000;
+ stock:number=5;
+ imageLocation:string='../assets/img/th.jfif';
+}
+app.component.html
+<div class="panel panel-default" style="width:900px">
+<div class="panel-body">
+<div class="card" style="margin-left:400px; margin-top:50px">
+  <img [src]="imageLocation" width="100%" height="50%" style="padding:15px">
+  <div class="card-body">
+    <h4>Category :{{productTitle}}</h4>
+    <h4>Price :{{productPrice}}</h4>
+    <h4>Stock :{{stock}}</h4>
+  </div>
+  <button type="button" style="width:150px;margin-left: 180px;margin-bottom: 20px; " class="btn btn-success">Add to cart</button>
+</div>
+</div>
+</div>
